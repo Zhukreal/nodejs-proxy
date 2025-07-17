@@ -19,6 +19,7 @@ app.post("/token", async (req, res) => {
 
     // Parse and forward the response
     const data = await response.text(); // Use .text() to allow all content-types
+    console.log("response data: ", data);
     res.status(response.status);
     res.set(Object.fromEntries(response.headers.entries()));
     res.send(data);
