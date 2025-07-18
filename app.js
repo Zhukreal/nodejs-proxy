@@ -57,7 +57,7 @@ app.get("/token/settings", async (req, res) => {
     const data = await response.json();
     console.log("response data: ", data);
     res.status(response.status);
-    res.set(Object.fromEntries(response.headers.entries()));
+    // res.set(Object.fromEntries(response.headers.entries()));
     res.send(data);
   } catch (error) {
     console.error("Proxy error:", error);
