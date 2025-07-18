@@ -54,7 +54,7 @@ app.get("/token/settings", async (req, res) => {
     );
 
     // Parse and forward the response
-    const data = await response.text(); // Use .text() to allow all content-types
+    const data = await response.json();
     console.log("response data: ", data);
     res.status(response.status);
     res.set(Object.fromEntries(response.headers.entries()));
