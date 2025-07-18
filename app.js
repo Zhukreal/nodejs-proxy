@@ -36,7 +36,7 @@ app.post("/token", async (req, res) => {
 });
 
 // Token endpoint
-app.get("/settings", async (req, res) => {
+app.get("/token/settings", async (req, res) => {
   try {
     console.log("req.headers", req.headers);
 
