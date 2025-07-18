@@ -9,6 +9,8 @@ app.use(express.json());
 // Token endpoint
 app.post("/token", async (req, res) => {
   try {
+    console.log("req.headers", req.headers);
+
     const response = await fetch("https://widget-api.imi.chat/oauth/token", {
       method: "POST",
       headers: {
