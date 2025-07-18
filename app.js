@@ -16,6 +16,7 @@ app.post("/token", async (req, res) => {
       headers: {
         ...req.headers,
         client_host: "qa.webconnectorprojects.com",
+        grant_type: "client_credentials",
         // host: new URL(API_C_BASE_URL).host, // Override host if necessary
       },
     });
