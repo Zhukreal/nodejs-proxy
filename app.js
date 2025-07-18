@@ -15,6 +15,7 @@ app.post("/token", async (req, res) => {
       method: "POST",
       headers: {
         ...req.headers,
+        client_host: "qa.webconnectorprojects.com",
         // host: new URL(API_C_BASE_URL).host, // Override host if necessary
       },
     });
